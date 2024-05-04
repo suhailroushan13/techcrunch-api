@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/suhailroushan13/techcrunch-api.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "api",
     "techcrunch",
