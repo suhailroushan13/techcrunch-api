@@ -1,0 +1,26 @@
+{
+  "name": "techcrunch-api",
+  "version": "1.0.2",
+  "description": "TechCrunch API is a powerful Node.js package designed to facilitate the extraction of article data from TechCrunch based on specific categories or tags",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bash script.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhailroushan13/techcrunch-api.git"
+  },
+  "keywords": [
+    "api",
+    "techcrunch",
+    "news",
+    "nodejs",
+    "npm"
+  ],
+  "author": "Suhail Roushan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suhailroushan13/techcrunch-api/issues"
+  },
+  "homepage": "https://github.com/suhailroushan13/techcrunch-api#readme"
+}
