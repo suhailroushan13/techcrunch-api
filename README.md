@@ -65,7 +65,7 @@ import { getByCategory, getByTag } from "techcrunch-api";
 
 const fetchArticles = async () => {
   try {
-    const articles = await getByCategory("security"); // 'ai' is used for 'artificial-intelligence'
+    const articles = await getByCategory("security"); 
     console.log(articles);
   } catch (error) {
     console.error("Error fetching articles:", error);
