@@ -20,12 +20,14 @@ async function scrapeData(url) {
     return articles;
 }
 
-export async function getByCategory(category) {
+async function getByCategory(category) {
     const url = `https://techcrunch.com/category/${category}/`;
     return scrapeData(url);
 }
 
-export async function getByTag(tag) {
+async function getByTag(tag) {
     const url = `https://techcrunch.com/tag/${tag}/`;
     return scrapeData(url);
 }
+
+export { getByCategory, getByTag }

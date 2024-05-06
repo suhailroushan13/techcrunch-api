@@ -47,15 +47,30 @@ npm install techcrunch-api
 
 # ES6 Syntax
 
+
 ```javascript
 import { getByCategory, getByTag } from "techcrunch-api";
 
 // Fetch articles by category
+// Valid categories/tags for fetching articles (must be used in lowercase):
+// 1. media-entertainment
+// 2. transportation
+// 3. cryptocurrency
+// 4. security
+// 5. artificial-intelligence
+// 6. apps
+// 7. fintech
+// 8. startups
+// 9. venture
+// 10. hardware
+
 getByCategory("artificial-intelligence").then((articles) => {
   console.log(articles);
 });
 
 // Fetch articles by tag
+
+// By Popular Keywords search it
 getByTag("startups").then((articles) => {
   console.log(articles);
 });
