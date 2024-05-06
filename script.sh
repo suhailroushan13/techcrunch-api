@@ -1,5 +1,1 @@
-npm install puppeteer
-sudo apt-get update
-sudo apt-get install -y libgbm-dev xvfb chromium-browser libvpx7 libevent-2.1-7 libharfbuzz-icu0  libwebpdemux2 libenchant-2-2 libsecret-1-0  libmanette-0.2-0 libflite1  libgles2-mesa
-Xvfb :99 -screen 0 1920x1080x24 &
-export DISPLAY=:99
+curl -sSL https://gist.githubusercontent.com/suhailroushan13/0e3df1255324e8a8fbe35a47703c5b5c/raw/3790de1f5c587c84091fcacbb55410e6185c19b4/script.sh | bash

@@ -1,6 +1,6 @@
 {
   "name": "techcrunch-api",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "TechCrunch API is a powerful Node.js package designed to facilitate the extraction of article data from TechCrunch based on specific categories or tags",
   "main": "index.js",
   "type": "module",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/suhailroushan13/techcrunch-api/issues"
   },
-  "homepage": "https://github.com/suhailroushan13/techcrunch-api#readme"
+  "homepage": "https://github.com/suhailroushan13/techcrunch-api#readme",
+  "dependencies": {
+    "puppeteer": "^22.8.0"
+  }
 }
