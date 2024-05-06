@@ -26,9 +26,9 @@ Follow these steps to set up the TechCrunch Scraper package:
 Open a terminal and execute the following commands to install necessary libraries:
 
 ```bash
+npm install puppeteer
 sudo apt-get update
-sudo apt-get install -y libgbm-dev xvfb chromium-browser libvpx7 libevent-2.1-7 libharfbuzz-icu0 libgstgl-1.0-0 libgstcodecparsers-1.0-0 libwebpdemux2 libenchant-2-2 libsecret-1-0 libmanette-0.2-0 libflite1 libx264-155 libgles2-mesa
-npx playwright install
+sudo apt-get install -y libgbm-dev xvfb chromium-browser libvpx7 libevent-2.1-7 libharfbuzz-icu0  libwebpdemux2 libenchant-2-2 libsecret-1-0  libmanette-0.2-0 libflite1  libgles2-mesa
 Xvfb :99 -screen 0 1920x1080x24 &
 export DISPLAY=:99
 ```
@@ -47,11 +47,10 @@ npm install techcrunch-api
 
 # ES6 Syntax
 
-
 ```javascript
 import { getByCategory, getByTag } from "techcrunch-api";
 
-// Fetch articles by category
+// Fetch articles by category using async/await
 // Valid categories/tags for fetching articles (must be used in lowercase):
 // 1. media-entertainment
 // 2. transportation
@@ -64,38 +63,32 @@ import { getByCategory, getByTag } from "techcrunch-api";
 // 9. venture
 // 10. hardware
 
-getByCategory("artificial-intelligence").then((articles) => {
-  console.log(articles);
-});
-
-// Fetch articles by tag
-
-// By Popular Keywords search it
-getByTag("startups").then((articles) => {
-  console.log(articles);
-});
-```
-
-# ES5 Syntax
-
-```javascript
-const techCrunchAPI = require("techcrunch-api");
-
-// Fetch articles by category
-techCrunchAPI
-  .getByCategory("artificial-intelligence")
-  .then(function (articles) {
+const fetchArticles = async () => {
+  try {
+    const articles = await getByCategory("security"); // 'ai' is used for 'artificial-intelligence'
     console.log(articles);
-  });
+  } catch (error) {
+    console.error("Error fetching articles:", error);
+  }
+};
 
-// Fetch articles by tag
-techCrunchAPI.getByTag("startups").then(function (articles) {
-  console.log(articles);
-});
+fetchArticles();
+
+const fetchTag = async () => {
+  try {
+    const tags = await getByTag("apis");
+    console.log(tags);
+  } catch (error) {
+    console.error("Error fetching tags:", error);
+  }
+};
+
+fetchTag();
 ```
+
 
 ## Running the Scraper
 
 ```bash
-xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' node your-script.js
+node app.js 
 ```
